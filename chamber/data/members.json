@@ -4,7 +4,7 @@
     "address": "123 Tech Street, Silicon Valley, CA",
     "phone": "+1-800-555-1234",
     "website": "https://techinnovators.com",
-    "image": "tech_innovators.png",
+    "image": "tech_innovators.jpeg",
     "membershipLevel": 3,
     "description": "Leading provider of innovative technology solutions.",
     "industry": "Technology"
@@ -14,7 +14,7 @@
     "address": "456 Green Way, Portland, OR",
     "phone": "+1-800-555-5678",
     "website": "https://ecosolutions.com",
-    "image": "eco_solutions.png",
+    "image": "eco_solutions.jpeg",
     "membershipLevel": 2,
     "description": "Sustainable energy and eco-friendly products company.",
     "industry": "Renewable Energy"
@@ -24,7 +24,7 @@
     "address": "789 Wellness Avenue, Austin, TX",
     "phone": "+1-800-555-9101",
     "website": "https://healthfirst.com",
-    "image": "health_first.png",
+    "image": "health_first.jpg",
     "membershipLevel": 1,
     "description": "Dedicated to improving health and wellness worldwide.",
     "industry": "Healthcare"
@@ -44,7 +44,7 @@
     "address": "202 Adventure Lane, Miami, FL",
     "phone": "+1-800-555-3344",
     "website": "https://globetravelers.com",
-    "image": "globe_travelers.png",
+    "image": "globe_travelers.jpg",
     "membershipLevel": 2,
     "description": "Top-tier travel agency offering unique global experiences.",
     "industry": "Travel and Tourism"
@@ -64,7 +64,7 @@
     "address": "404 Motor Drive, Detroit, MI",
     "phone": "+1-800-555-7788",
     "website": "https://autopromechanics.com",
-    "image": "autopro_mechanics.png",
+    "image": "autopro_mechanics.jpeg",
     "membershipLevel": 3,
     "description": "Experts in auto repair and maintenance services.",
     "industry": "Automotive"

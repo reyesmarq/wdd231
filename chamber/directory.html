@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="WDD 131 - Web Frontend Development I - Chamber project" />
+  <meta name="author" content="Mauricio Alejandro Reyes Quintanilla" />
+  <title>Web Frontend Development I - Chamber - Directory</title>
+
+  <meta property="og:title" content="Web Frontend Development I - Chamber - Directory">
+  <meta property="og:description"
+    content="Discover amazing features and services on our Chamber of Commerce website. Explore our directory and find what you need!">
+  <meta property="og:image"
+    content="https://images.pexels.com/photos/696205/pexels-photo-696205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+  <meta property="og:url" content="https://example.com/directory">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital@0;1&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/utils.css">
+
+  <script src="scripts/pages/directory.js" defer></script>
+  <script src="scripts/components/footer.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <section class="header__navbar">
+      <div class="header__nav">
+        <h1 class="header__title">
+          <a href="/">Chamber of Commerce</a>
+        </h1>
+        <div class="header__icon" id="nav-hamburger">
+          ☰
+        </div>
+      </div>
+      <nav class="nav" id="nav">
+        <ul class="nav__menu">
+          <li class="nav__menu-item">
+            <a href="" class="nav__menu-link">Home</a>
+          </li>
+          <li class="nav__menu-item">
+            <a href="" class="nav__menu-link">Directory</a>
+          </li>
+          <li class="nav__menu-item">
+            <a href="" class="nav__menu-link">Join</a>
+          </li>
+          <li class="nav__menu-item">
+            <a href="" class="nav__menu-link">Discovery</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="hero">
+      <img
+        src="https://images.pexels.com/photos/696205/pexels-photo-696205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="Hero Image" class="hero__image">
+      <div class="hero__content">
+        <h1 class="hero__title">Welcome to Our Website</h1>
+        <p class="hero__subtitle">Discover amazing features and services</p>
+      </div>
+      <a href="#" class="hero__button">Get Started</a>
+    </section>
+  </header>
+
+  <main class="main" id="main">
+    <div class="display:flex flex:justify:center margin:y:base">
+      <div class="icon is-active">
+        <img src="images/grid-icon.svg" alt="" data-list-type="grid">
+      </div>
+      <div class="icon">
+        <img src="images/list-icon.svg" alt="" data-list-type="list">
+      </div>
+    </div>
+    <div id="members-container"></div>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+</body>
+
+</html>
