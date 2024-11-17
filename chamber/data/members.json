@@ -4,62 +4,69 @@
     "address": "123 Tech Street, Silicon Valley, CA",
     "phone": "+1-800-555-1234",
     "website": "https://techinnovators.com",
-    "iconFileName": "tech_innovators.png",
+    "image": "tech_innovators.png",
     "membershipLevel": 3,
-    "description": "Leading provider of innovative technology solutions."
+    "description": "Leading provider of innovative technology solutions.",
+    "industry": "Technology"
   },
   {
     "name": "Eco Solutions LLC",
     "address": "456 Green Way, Portland, OR",
     "phone": "+1-800-555-5678",
     "website": "https://ecosolutions.com",
-    "iconFileName": "eco_solutions.png",
+    "image": "eco_solutions.png",
     "membershipLevel": 2,
-    "description": "Sustainable energy and eco-friendly products company."
+    "description": "Sustainable energy and eco-friendly products company.",
+    "industry": "Renewable Energy"
   },
   {
     "name": "Health First Corp.",
     "address": "789 Wellness Avenue, Austin, TX",
     "phone": "+1-800-555-9101",
     "website": "https://healthfirst.com",
-    "iconFileName": "health_first.png",
+    "image": "health_first.png",
     "membershipLevel": 1,
-    "description": "Dedicated to improving health and wellness worldwide."
+    "description": "Dedicated to improving health and wellness worldwide.",
+    "industry": "Healthcare"
   },
   {
     "name": "FinTech Innovations",
     "address": "101 FinTech Road, New York, NY",
     "phone": "+1-800-555-1122",
     "website": "https://fintechinnovations.com",
-    "iconFileName": "fintech_innovations.png",
+    "image": "fintech_innovations.png",
     "membershipLevel": 3,
-    "description": "Pioneers in financial technology and digital banking."
+    "description": "Pioneers in financial technology and digital banking.",
+    "industry": "Financial Technology"
   },
   {
     "name": "Globe Travelers",
     "address": "202 Adventure Lane, Miami, FL",
     "phone": "+1-800-555-3344",
     "website": "https://globetravelers.com",
-    "iconFileName": "globe_travelers.png",
+    "image": "globe_travelers.png",
     "membershipLevel": 2,
-    "description": "Top-tier travel agency offering unique global experiences."
+    "description": "Top-tier travel agency offering unique global experiences.",
+    "industry": "Travel and Tourism"
   },
   {
     "name": "EduGrow Academy",
     "address": "303 Knowledge Blvd, Boston, MA",
     "phone": "+1-800-555-5566",
     "website": "https://edugrowacademy.com",
-    "iconFileName": "edugrow_academy.png",
+    "image": "edugrow_academy.png",
     "membershipLevel": 1,
-    "description": "Online learning platform for personal and professional growth."
+    "description": "Online learning platform for personal and professional growth.",
+    "industry": "Education"
   },
   {
     "name": "AutoPro Mechanics",
     "address": "404 Motor Drive, Detroit, MI",
     "phone": "+1-800-555-7788",
     "website": "https://autopromechanics.com",
-    "iconFileName": "autopro_mechanics.png",
+    "image": "autopro_mechanics.png",
     "membershipLevel": 3,
-    "description": "Experts in auto repair and maintenance services."
+    "description": "Experts in auto repair and maintenance services.",
+    "industry": "Automotive"
   }
 ]
