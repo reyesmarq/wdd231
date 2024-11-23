@@ -1,123 +1,36 @@
-/// <reference path="../types.d.ts" />
-(async () => {
-  const URL = 'https://reyesmarq.github.io/wdd231/chamber/data/members.json';
-  const response = await fetch(URL);
-  let isGrid = true;
+import { Layout } from '../components/Layout.js';
+import { MemberList } from '../components/MemberList.js';
+import { useState } from '../utils/use-state.js';
 
-  /** @type {Member[]} */
-  const data = await response.json();
+const [getListType, setListType] = useState('grid');
 
-  const membersContainer = document.getElementById('members-container');
+async function render() {
+  const listType = getListType();
 
-  /** @type {string} */
-  const membersHtml = buildMembersHtmlFrom({
-    type: isGrid ? 'grid' : 'list',
-    data,
-  });
-
-  membersContainer.innerHTML = membersHtml;
-
-  document.getElementById('main').addEventListener('click', (event) => {
-    if (!event.target.dataset['listType']) {
-      return;
-    }
-    if (
-      (isGrid && event.target.dataset['listType'] === 'grid') ||
-      (!isGrid && event.target.dataset['listType'] === 'list')
-    ) {
-      return;
-    }
-
-    isGrid = !isGrid;
-    const membersHtml = buildMembersHtmlFrom({
-      type: isGrid ? 'grid' : 'list',
-      data,
-    });
-    membersContainer.innerHTML = membersHtml;
-    if (event.target.tagName === 'IMG') {
-      event.target.parentElement.classList.toggle('is-active');
-      const siblingElement =
-        event.target.parentElement.nextElementSibling ||
-        event.target.parentElement.previousElementSibling;
-      siblingElement.classList.toggle('is-active');
-    }
-  });
-})();
-
-const listType = {
-  grid: buildMembersHtmlGrid,
-  list: buildMembersHtmlList,
-};
-
-function buildMembersHtmlFrom({ type, data }) {
-  return listType[type](data);
-}
-
-/** @param {Member[]} data */
-function buildMembersHtmlGrid(data) {
-  const membersHtmlInGrid = data
-    .map((member) => {
-      const { name, phone, website, image, industry } = member;
-      return `
-      <div class="card">
-        <div class="card__header">
-          <h1 class="card__title">${name}</h1>
-          <h2 class="card__subtitle">${industry}</h2>
+  document.getElementById('root').innerHTML = Layout({
+    children: `
+    <main class="main" id="main">
+      <div class="display:flex flex:justify:center margin:y:base">
+        <div class="icon ${listType === 'grid' ? 'is-active' : ''}">
+          <img src="images/grid-icon.svg" alt="" data-list-type="grid">
         </div>
-        <div class="card__body">
-          <img src="images/${image}" alt="${name}" class="card__image">
-          <div class="card__info">
-            <p><span class="card__info-label">Email:</span>email@domain.com</p>
-            <p><span class="card__info-label">Phone:</span>${phone}</p>
-            <p><span class="card__info-label">Website:</span>${website}</p>
-          </div>
+        <div class="icon ${listType === 'list' ? 'is-active' : ''}">
+          <img src="images/list-icon.svg" alt="" data-list-type="list">
         </div>
       </div>
-    `;
-    })
-    .join('');
-  const membersHtml = `
-    <div class="cards-container">
-      ${membersHtmlInGrid}
-    </div>
-  `;
-  return membersHtml;
+      ${await MemberList({ type: listType })}
+    </main>
+  `,
+  });
+
+  document.querySelectorAll('.icon img').forEach((icon) => {
+    icon.addEventListener('click', (e) => {
+      const newListType = e.target.getAttribute('data-list-type');
+      setListType(newListType, render);
+    });
+  });
 }
 
-/** @param {Member[]} data */
-function buildMembersHtmlList(data) {
-  const tHeadHtmlContent = `
-    <tr>
-      <th>Company name</th>
-      <th>Address</th>
-      <th>Phone number</th>
-      <th>website</th>
-    </tr>
-  `;
-  const tBodyHtmlContent = data
-    .map((member) => {
-      const { name, address, phone, website } = member;
-      return `
-      <tr>
-        <td>${name}</td>
-        <td>${address}</td>
-        <td>${phone}</td>
-        <td>${website}</td>
-      </tr>
-    `;
-    })
-    .join('');
-
-  const membersHtmlInList = `
-    <table>
-      <thead>
-        ${tHeadHtmlContent}
-      </thead>
-      <tbody>
-        ${tBodyHtmlContent}
-      </tbody>
-    </table>
-  `;
-
-  return membersHtmlInList;
-}
+(async () => {
+  await render();
+})();
