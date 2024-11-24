@@ -1,6 +1,10 @@
-export function Member({ name, phone, website, image, industry }) {
+// TODO: need to be more agnostic about the data that is passed in
+export function Member(
+  { name, phone, website, image, industry },
+  { classToAdd } = { classToAdd: '' },
+) {
   return `
-    <div class="card">
+    <div class="card ${classToAdd}">
       <div class="card__header">
         <h1 class="card__title">${name}</h1>
         <h2 class="card__subtitle">${industry}</h2>
