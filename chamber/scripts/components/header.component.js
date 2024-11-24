@@ -4,7 +4,7 @@ export function Header() {
       <section class="header__navbar">
         <div class="header__nav">
           <h1 class="header__title">
-            <a href="/">Chamber of Commerce</a>
+            <a href="/wdd231/chamber">Chamber of Commerce</a>
           </h1>
           <div class="header__icon" id="nav-hamburger">
             ☰
@@ -13,10 +13,10 @@ export function Header() {
         <nav class="nav" id="nav">
           <ul class="nav__menu">
             <li class="nav__menu-item">
-              <a href="/chamber" class="nav__menu-link">Home</a>
+              <a href="/wdd231/chamber" class="nav__menu-link">Home</a>
             </li>
             <li class="nav__menu-item">
-              <a href="/chamber/directory.html" class="nav__menu-link">Directory</a>
+              <a href="/wdd231/chamber/directory.html" class="nav__menu-link">Directory</a>
             </li>
             <li class="nav__menu-item">
               <a href="" class="nav__menu-link">Join</a>
