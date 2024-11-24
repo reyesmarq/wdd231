@@ -1,4 +1,5 @@
 export function Footer() {
+  const lastModifiedDate = new Date().toLocaleDateString();
   return `
     <footer class="footer" id="footer">
       <section class="footer__section">
@@ -25,7 +26,7 @@ export function Footer() {
         <p>WDD231 Class Project</p>
         <p>Mau Reyes</p>
         <p>All rights reserved &copy; 2024</p>
-        <p>Last modified: <span id="last-modified-date"></span></p>
+        <p>Last modified: <span>${lastModifiedDate}</span></p>
       </section>
     </footer>
   `;

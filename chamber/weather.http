@@ -1,4 +1,0 @@
-# GET https://api.openweathermap.org/data/2.5/weather?lat=34.05190227968152&lon=-118.33213877275458&appid=1ca326ae32c593ce6698b857e803be2e&units=imperial
-
-
-GET https://api.openweathermap.org/data/2.5/forecast?lat=34.05190227968152&lon=-118.33213877275458&appid=1ca326ae32c593ce6698b857e803be2e&units=imperial

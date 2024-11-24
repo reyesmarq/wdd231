@@ -13,10 +13,10 @@ export function Header() {
         <nav class="nav" id="nav">
           <ul class="nav__menu">
             <li class="nav__menu-item">
-              <a href="" class="nav__menu-link">Home</a>
+              <a href="/chamber" class="nav__menu-link">Home</a>
             </li>
             <li class="nav__menu-item">
-              <a href="" class="nav__menu-link">Directory</a>
+              <a href="/chamber/directory.html" class="nav__menu-link">Directory</a>
             </li>
             <li class="nav__menu-item">
               <a href="" class="nav__menu-link">Join</a>

@@ -1,5 +1,5 @@
-import { Footer } from './Footer.js';
-import { Header } from './Header.js';
+import { Footer } from './footer.component.js';
+import { Header } from './header.component.js';
 
 /** @typedef {{ children: string }} Props */
 export function Layout({ children }) {
