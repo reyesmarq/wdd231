@@ -177,8 +177,9 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1rem;
   flex-wrap: wrap;
+  margin-block: var(--large);
+  gap: 1rem;
 }
 
 .card {
@@ -237,9 +238,9 @@ h6 {
 }
 
 .box {
-  background-color: var(--color-grey);
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
 .box__header {

@@ -35,6 +35,10 @@
   margin-block: var(--xjumbo);
 }
 
+.margin\:y\:large {
+  margin-block: var(--large);
+}
+
 .width\:max {
   width: 100%;
 }
