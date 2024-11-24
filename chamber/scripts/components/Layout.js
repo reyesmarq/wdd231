@@ -1,4 +1,4 @@
-import { Footer } from './_Footer.js';
+import { Footer } from './Footer.js';
 import { Header } from './Header.js';
 
 /** @typedef {{ children: string }} Props */
