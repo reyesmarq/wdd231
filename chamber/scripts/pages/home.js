@@ -14,6 +14,7 @@ async function render() {
   document.getElementById('root').innerHTML = Layout({
     children: `
     <main class="main" id="main">
+      <h1>Home</h1>
       <div class="flex-container">
         ${Box(
           {
