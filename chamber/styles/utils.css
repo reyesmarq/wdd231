@@ -39,6 +39,18 @@
   margin-block: var(--large);
 }
 
+.margin\:y\:medium {
+  margin-block: var(--medium);
+}
+
+.margin\:x\:auto {
+  margin-inline: auto;
+}
+
+.width\:90\% {
+  width: 90%;
+}
+
 .width\:max {
   width: 100%;
 }
@@ -53,6 +65,14 @@
 
 .line\:height\:large {
   line-height: var(--large);
+}
+
+.padding\:base {
+  padding: var(--base);
+}
+
+.border\:radius\:base {
+  border-radius: var(--base);
 }
 
 /*****************************************************************************/
@@ -71,6 +91,14 @@
 /*****************************************************************************/
 .bg\:primary {
   background-color: var(--color-primary);
+}
+
+.font\:color\:primary {
+  color: var(--color-primary);
+}
+
+.font\:color\:secondary {
+  color: var(--color-secondary);
 }
 
 .bg\:secondary {
@@ -94,4 +122,19 @@
 
 .font\:size\:xlarge {
   font-size: var(--xlarge);
+}
+
+.font\:size\:jumbo {
+  font-size: var(--jumbo);
+}
+
+.font\:size\:xjumbo {
+  font-size: var(--xjumbo);
+}
+
+/*****************************************************************************/
+/* Text 
+/*****************************************************************************/
+.text\:center {
+  text-align: center;
 }

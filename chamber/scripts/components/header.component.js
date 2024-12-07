@@ -19,7 +19,7 @@ export function Header() {
               <a href="/wdd231/chamber/directory.html" class="nav__menu-link">Directory</a>
             </li>
             <li class="nav__menu-item">
-              <a href="" class="nav__menu-link">Join</a>
+              <a href="/wdd231/chamber/join.html" class="nav__menu-link">Join</a>
             </li>
             <li class="nav__menu-item">
               <a href="" class="nav__menu-link">Discovery</a>

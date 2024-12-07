@@ -10,7 +10,6 @@ async function render() {
   document.getElementById('root').innerHTML = Layout({
     children: `
     <main class="main" id="main">
-      <h1>Home > Directory</h1>
       <div class="display:flex flex:justify:center margin:y:base">
         <div class="icon ${listType === 'grid' ? 'is-active' : ''}">
           <img src="images/grid-icon.svg" alt="" data-list-type="grid">

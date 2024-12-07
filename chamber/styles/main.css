@@ -426,3 +426,149 @@ td:before {
 /*****************************************************************************/
 @media (min-width: 1280px) {
 }
+
+input .container {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.form {
+  padding: 20px;
+  border: 1px solid #f1faee;
+  max-width: 60%;
+  margin-inline: auto;
+  background-color: white;
+  color: var(--color-black) !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form .btn {
+  background-color: var(--color-primary) !important;
+  color: var(--color-black) !important;
+}
+
+form input:not([type='submit']),
+form select,
+form textarea {
+  color: var(--primary-color) !important;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.form-control:not(.container) > div:nth-child(1) {
+  margin-top: 8px;
+}
+
+.form-control.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.text-small {
+  font-size: 0.7rem;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+@media (min-width: 768px) {
+  .form-control.container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.form-label {
+  color: var(--color-secondary);
+}
+
+.form-label.accent {
+  color: steelblue;
+  font-weight: bold;
+}
+
+.form-input {
+  all: unset;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  /* light green color */
+  background-color: #4caf50 !important;
+  color: white;
+  cursor: pointer;
+  padding: 16px 24px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-block: 8px;
+}
+
+.btn.primary {
+  background-color: var(--primary-color);
+}
+
+.badge {
+  padding: var(--base) var(--small);
+  border-radius: 4px;
+  background-color: var(--color-primary);
+  color: var(--color-black);
+  border-radius: var(--tiny);
+  cursor: pointer;
+}
+
+.dialog {
+  position: fixed;
+  top: 50%;
+  padding: var(--medium);
+  border-radius: var(--tiny);
+  box-shadow: 5px 4px 8px -3px rgba(0, 0, 0, 0.5);
+  width: 40%;
+  border: none;
+}
+
+.dialog__close {
+  color: var(--color-dark);
+  background-color: var(--color-primary);
+  font-size: var(--jumbo);
+  cursor: pointer;
+  border-radius: var(--tiny);
+  border: none;
+}
+
+.dialog__title {
+  font-size: var(--jumbo);
+  font-weight: bold;
+  color: var(--color-secondary);
+  text-align: center;
+  margin: var(--medium);
+}
+
+.dialog__content {
+  font-size: var(--medium);
+  color: var(--color-black);
+  text-align: center;
+  margin: var(--medium);
+}
