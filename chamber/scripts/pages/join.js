@@ -23,14 +23,23 @@ const planData = [
   },
 ];
 
-//! THERE IS A BUG IF I RERENDER WITHOUT MANAGING STATE OF THE INPUTS
 const [getBadge, setBadge] = useState({ name: '', description: '' });
 const [getIsDialogOpen, setIsDialogOpen] = useState(false);
+const [getFormValues, setFormValues] = useState({
+  firstName: '',
+  lastName: '',
+  organizationTitle: '',
+  email: '',
+  mobile: '',
+  businessOrganizationsName: '',
+  membershipLevel: '',
+  description: '',
+});
 
 async function render() {
   const badge = getBadge();
   const isDialogOpen = getIsDialogOpen();
-  //const dialogId = getDialogId();
+  const formValues = getFormValues();
 
   document.getElementById('root').innerHTML = Layout({
     children: `
@@ -42,12 +51,16 @@ async function render() {
             type: 'text',
             required: true,
             autocomplete: 'given-name',
+            name: 'firstName',
+            value: formValues.firstName,
           })}
           ${FormControl({
             label: 'Last name',
             type: 'text',
             required: true,
             autocomplete: 'family-name',
+            name: 'lastName',
+            value: formValues.lastName,
           })}
           ${FormControl({
             label: 'Organization title',
@@ -55,6 +68,8 @@ async function render() {
             pattern: '^[A-Za-z\\s-]{7,}$',
             required: true,
             autocomplete: 'organization-title',
+            name: 'organizationTitle',
+            value: formValues.organizationTitle,
           })}
           ${FormControl({
             label: 'Email',
@@ -62,18 +77,24 @@ async function render() {
             placeholder: 'john@gmail.com',
             required: true,
             autocomplete: 'email',
+            name: 'email',
+            value: formValues.email,
           })}
           ${FormControl({
             label: 'Mobile',
             type: 'text',
             required: true,
             autocomplete: 'phone-number',
+            name: 'mobile',
+            value: formValues.mobile,
           })}
           ${FormControl({
             label: `Business/organization's name`,
             type: 'text',
             required: true,
             autocomplete: 'organization',
+            name: 'businessOrganizationsName',
+            value: formValues.businessOrganizationsName,
           })}
           ${FormControl({
             label: `Membership level`,
@@ -85,9 +106,11 @@ async function render() {
               { value: 'silver', label: 'Silver Membership' },
               { value: 'gold', label: 'Gold Membership' },
             ],
+            name: 'membershipLevel',
+            value: formValues.membershipLevel,
           })}
           <div>
-            <h2 class="font:color:secondary">Learn more</h2>
+            <h2 class="font:color:secondary">Learn more about the memberships</h2>
             <div class="flex-container">
               ${Badge({ text: 'Non profit' })}
               ${Badge({ text: 'Bronze Membership' })}
@@ -99,11 +122,13 @@ async function render() {
             label: 'description',
             type: 'textarea',
             required: true,
+            name: 'description',
+            value: formValues.description,
           })}
           ${FormControl({
             label: 'timestamp',
             type: 'hidden',
-            defaultValue: new Date().toString(),
+            value: new Date().toString(),
           })}
           <div class="form-control">
             <input type="submit" class="btn" value="Submit">
@@ -121,8 +146,10 @@ async function render() {
     `,
   });
 
+  // open dialog
   document.getElementById('badge-dialog').open = isDialogOpen;
 
+  // open dialog
   document.querySelectorAll('.badge').forEach((badge, index) => {
     badge.addEventListener('click', () => {
       setBadge(planData[index]);
@@ -130,9 +157,25 @@ async function render() {
     });
   });
 
+  // close dialog
   document.getElementById('closeBttn').addEventListener('click', () => {
     setIsDialogOpen(false, render);
   });
+
+  // track form values on change input
+  document
+    .querySelectorAll(
+      '.form-control input, .form-control textarea, .form-control select',
+    )
+    .forEach((input) => {
+      input.addEventListener('input', (e) => {
+        const name = e.target.name;
+        console.log('🚀 ~ name', name);
+        const value = e.target.value;
+        console.log('🚀 ~ value', value);
+        setFormValues({ ...getFormValues(), [name]: value });
+      });
+    });
 }
 
 (async () => {

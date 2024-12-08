@@ -28,13 +28,13 @@ function buildKey(key = '') {
 }
 
 const params = getParamsFromUrlOf([
-  'first-name',
-  'last-name',
-  'organization-title',
+  'firstName',
+  'lastName',
+  'organizationTitle',
   'email',
   'mobile',
-  'business-organizations-name',
-  'membership-level',
+  'businessOrganizationsName',
+  'membershipLevel',
   'description',
   'timestamp',
 ]);

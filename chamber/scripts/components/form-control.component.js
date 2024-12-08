@@ -16,7 +16,7 @@ export function FormControl({
   placeholder = undefined,
   selection = [],
   autocomplete = undefined,
-  defaultValue = undefined,
+  value,
 }) {
   if (type === inputType.selection && !selection.length) {
     throw new Error('Selection input type requires a selection array');
@@ -38,7 +38,7 @@ export function FormControl({
         ${pattern ? `pattern="${pattern}"` : ''}
         ${placeholder ? `placeholder="${placeholder}"` : ''}
         ${autocomplete ? `autocomplete="${autocomplete}"` : ''}
-        ${defaultValue ? `value="${defaultValue}"` : ''} 
+        ${value ? `value="${value}"` : ''} 
       >
     `;
   } else if (type === inputType.selection) {
@@ -48,10 +48,14 @@ export function FormControl({
         name=${name ?? label.toLowerCase().replace(' ', '-')}
         id=${buildId(id, label)}
         required=${required}
+        value="${value ? value : ''}" 
       >
         <option value="">--</option>
-        ${selection.map(
-          (option) => `<option value=${option.value}>${option.label}</option>`,
+        <option value="default" selected>default</option>
+        ${selection.map((option) =>
+          option.value === value
+            ? `<option value=${option.value} selected>${option.label}</option>`
+            : `<option value=${option.value}>${option.label}</option>`,
         )}.join('')
       </select>
     `;
@@ -64,7 +68,7 @@ export function FormControl({
         required="${required}"
         ${pattern ? `pattern="${pattern}"` : ''}
         ${placeholder ? `placeholder="${placeholder}"` : ''}
-      ></textarea>
+      >${value}</textarea>
     `;
   }
 
