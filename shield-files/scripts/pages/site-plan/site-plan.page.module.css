@@ -1,0 +1,102 @@
+body {
+  font-family: var(--font-text);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer {
+  background-color: var(--color-black);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  color: var(--color-white);
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+  color: var(--color-primary);
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.color-sample,
+.font-sample {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.color-sample.primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.color-sample.black {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.color-sample.white {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+}
+
+.color-sample.soft-gray {
+  background-color: var(--color-gray-dark);
+  color: var(--color-black);
+}
+
+.color-sample.light-gray {
+  background-color: var(--color-gray-light);
+  color: var(--color-black);
+}
+
+.font-sample.heading-font {
+  font-family: var(--font-title);
+  font-weight: bold;
+}
+
+.font-sample.body-font {
+  font-family: var(--font-text);
+}
+
+.wireframe-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.wireframe {
+  flex: 1;
+  min-width: 200px;
+}
+
+.wireframe img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--primary-color);
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1rem;
+  }
+}

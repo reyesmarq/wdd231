@@ -1,0 +1,20 @@
+:root {
+  --font-title: 'Roboto Mono', sans-serif;
+  --font-text: 'Roboto Mono', monospace;
+
+  --tiny: 0.625rem; /* 10px */
+  --xsmall: 0.75rem; /* 12px */
+  --small: 0.875rem; /* 14px */
+  --base: 1rem; /* 16px */
+  --medium: 1.125rem; /* 18px */
+  --large: 1.25rem; /* 20px */
+  --xlarge: 1.5rem; /* 24px */
+  --jumbo: 1.875rem; /* 30px */
+  --xjumbo: 2.25rem; /* 36px */
+
+  --color-primary: #e23636;
+  --color-black: #202020;
+  --color-white: #ffffff;
+  --color-gray-dark: #cccccc;
+  --color-gray-light: #f4f4f4;
+}
