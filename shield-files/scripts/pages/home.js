@@ -1,7 +1,7 @@
-import { loadCss } from '../../utils/load-css.js';
+import { loadCss } from '../utils/load-css.js';
 
 export function Home() {
-  loadCss('scripts/pages/home/home.page.module.css');
+  loadCss('styles/modules/pages/home.module.css');
 
   return `
     <header>

@@ -1,7 +1,7 @@
-import { loadCss } from '../../utils/load-css.js';
+import { loadCss } from '../utils/load-css.js';
 
 export function SitePlan() {
-  loadCss('scripts/pages/site-plan/site-plan.page.module.css');
+  loadCss('styles/modules/pages/site-plan.module.css');
 
   return `
     <header>

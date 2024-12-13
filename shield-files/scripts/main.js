@@ -1,6 +1,6 @@
-import { Home } from './pages/home/home.page.js';
+import { Home } from './pages/home.js';
 import { SitePlan } from './pages/site-plan/site-plan.page.js';
-import { NotFound } from './pages/not-found/not-found.page.js';
+import { NotFound } from './pages/not-found.js';
 
 // Define your routes and their corresponding components
 const routes = {
