@@ -5,11 +5,8 @@ import { Characters } from '../featchers/characters.js';
 export async function CharacterList() {
   loadCss('styles/modules/components/character-list.module.css');
 
-  //const characters = [{ name: 'Captain America' }];
   const data = await Characters.getMany();
   const characters = data.data.results;
 
-  return `
-    ${characters.map((character) => CharacterCard(character)).join('')} 
-  `;
+  return characters.map((character) => CharacterCard(character)).join('');
 }
