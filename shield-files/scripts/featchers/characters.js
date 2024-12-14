@@ -19,18 +19,42 @@ export class Characters {
    * @param {number} offset - The offset for pagination (default: 0).
    * @returns {Promise<Object>} - The API response data.
    */
-  static async getMany(limit = 20, offset = 0) {
+  static async getMany(args) {
+    const page = args.page ?? 1;
+    const limit = args.limit ?? 20;
+    const offset = page === 1 ? 0 : limit * (page - 1);
+    const query = args.query ?? undefined;
+
     try {
       const { ts, apikey, hash } = this.#generateAuthParams();
-      const url = `${this.#baseUrl}?ts=${ts}&apikey=${apikey}&hash=${hash}&limit=${limit}&offset=${offset}`;
+      const url = new URL(this.#baseUrl);
+      const urlParams = new URLSearchParams({
+        ts,
+        apikey,
+        hash,
+        limit,
+        offset,
+      });
+      if (query) {
+        urlParams.append('nameStartsWith', query);
+      }
+      url.search = urlParams.toString();
 
-      const response = await fetch(url);
+      const response = await fetch(url.toString());
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       const data = await response.json();
-      return data;
+      return {
+        data: data.data.results,
+        pagination: {
+          offset: data.data.offset,
+          limit: data.data.limit,
+          total: data.data.total,
+          count: data.data.count,
+        },
+      };
     } catch (error) {
       console.error('Error fetching characters:', error);
       throw error;
