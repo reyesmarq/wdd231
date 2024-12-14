@@ -18,3 +18,17 @@
   --color-gray-dark: #cccccc;
   --color-gray-light: #f4f4f4;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-text);
+  font-size: var(--base);
+  line-height: 1.5;
+  background-color: var(--color-gray-light);
+  color: var(--color-black);
+}
