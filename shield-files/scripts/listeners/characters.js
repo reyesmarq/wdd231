@@ -8,6 +8,7 @@ export function charactersListener(query, page) {
         characterList.characters;
       document.getElementById('pagination').innerHTML = Pagination({
         ...characterList.pagination,
+        page,
       });
     });
   }
@@ -17,9 +18,14 @@ export function charactersListener(query, page) {
   if (searchInput && searchButton) {
     searchInput.value = query;
     searchButton.addEventListener('click', () => {
+      localStorage.setItem('queryParam', searchInput.value);
       searchInput.value = searchInput.value;
       const query = searchInput.value;
-      window.location.hash = `#characters?query=${encodeURIComponent(query)}`;
+
+      window.location.hash = query
+        ? `#characters?query=${encodeURIComponent(query)}`
+        : '#characters';
+
       updateCharacterList(query);
     });
 
