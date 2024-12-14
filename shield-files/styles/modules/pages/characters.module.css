@@ -65,6 +65,12 @@ h1 {
 .character-description {
   font-size: 0.9rem;
   color: var(--color-gray-dark);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 768px) {
