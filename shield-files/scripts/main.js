@@ -18,6 +18,11 @@ const app = document.getElementById('app');
 
 // Function to render the route
 async function renderRoute() {
+  const queryFromLocalStorage = localStorage.getItem('queryParam');
+  if (!queryFromLocalStorage) {
+    localStorage.setItem('queryParam', '');
+  }
+
   const path = window.location.hash.split('?')[0] || '#home';
   // TODO: need to find out a better way to handle this
   const [_, id] = window.location.hash.split('/');
