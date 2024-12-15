@@ -46,6 +46,7 @@ export class Characters {
       }
 
       const data = await response.json();
+      console.log('🚀 ~ data', data.data.results[0]);
       return {
         data: data.data.results,
         pagination: {

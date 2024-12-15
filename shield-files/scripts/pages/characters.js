@@ -1,6 +1,5 @@
 import { loadCss } from '../utils/load-css.js';
 import { Layout } from '../components/layout.js';
-import { Pagination } from '../components/pagination.js';
 
 export async function Characters() {
   loadCss('styles/modules/pages/characters.module.css');
