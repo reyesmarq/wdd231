@@ -53,11 +53,14 @@ h1 {
 }
 
 .character-card {
+  color: var(--color-black);
+  text-decoration: none;
   background-color: var(--color-white);
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .character-card:hover {

@@ -61,4 +61,27 @@ export class Characters {
       throw error;
     }
   }
+
+  static async getOne(id) {
+    try {
+      const { ts, apikey, hash } = this.#generateAuthParams();
+      const url = new URL(this.#baseUrl);
+
+      const response = await fetch(
+        `${url.toString()}/${id}?ts=${ts}&apikey=${apikey}&hash=${hash}`,
+      );
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      if (data.data.results.length === 0) {
+        throw new Error('Character not found');
+      }
+      return data.data.results[0];
+    } catch (error) {
+      console.error('Error fetching character:', error);
+      throw error;
+    }
+  }
 }

@@ -1,10 +1,10 @@
-.container {
+.character-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
-header {
+.character-header {
   background-color: var(--color-primary);
   color: var(--color-white);
   text-align: center;
@@ -32,7 +32,6 @@ h2 {
 .character-image img {
   width: 100%;
   max-width: 400px;
-  height: auto;
   border-radius: 10px;
 }
 
@@ -71,8 +70,8 @@ h2 {
   border-radius: 5px;
 }
 
-@media (max-width: 768px) {
-  .character-info {
-    flex-direction: column;
-  }
-}
+/*@media (max-width: 768px) {*/
+/*  .character-info {*/
+/*    flex-direction: column;*/
+/*  }*/
+/*}*/

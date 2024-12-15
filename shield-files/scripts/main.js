@@ -12,7 +12,7 @@ const routes = {
   //['#characters']: async (id) =>
   //  id ? await Characters(id) : await Characters(),
   ['#characters']: async () => await Characters(),
-  ['#characters/:id']: async () => await Character(),
+  ['#characters/:id']: async (id) => await Character(id),
 };
 
 // Get the content container
