@@ -14,9 +14,11 @@
 }
 
 .logo {
+  text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
   font-family: var(--font-title);
+  color: var(--color-white);
 }
 
 .nav-links a {

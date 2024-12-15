@@ -6,7 +6,7 @@ export function Header() {
   return `
     <header class="header">
       <nav class="nav">
-        <div class="logo">Shield Files</div>
+        <a class="logo" href="#home">Shield Files</a>
         <div class="nav-links">
           <a href="#characters">Characters</a>
           <a href="#about">About</a>

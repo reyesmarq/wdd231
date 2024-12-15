@@ -18,10 +18,10 @@ export function Home() {
         <section id="features" class="features">
           <h2>Features</h2>
           <div class="feature-grid">
-            <div class="feature">
+            <a class="feature" href="#characters">
               <h3>Character Database</h3>
               <p>Access detailed information on thousands of Marvel characters</p>
-            </div>
+            </a>
             <div class="feature">
               <h3>Comic Explorer</h3>
               <p>Discover and browse through Marvel's vast comic collection</p>
