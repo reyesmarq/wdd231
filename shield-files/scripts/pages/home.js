@@ -11,7 +11,7 @@ export function Home() {
           <div class="hero-content">
             <h1>Welcome to Shield Files</h1>
             <p>Unlock the Marvel Universe with our powerful API interaction tool</p>
-            <a href="#" class="cta-button">Get Started</a>
+            <a href="#characters" class="cta-button">Get Started</a>
           </div>
         </section>
 
@@ -25,14 +25,12 @@ export function Home() {
             <div class="feature">
               <h3>Comic Explorer</h3>
               <p>Discover and browse through Marvel's vast comic collection</p>
+              <p><strong>(under construction)</strong></p>
             </div>
             <div class="feature">
               <h3>Timeline Tracker</h3>
               <p>Follow character appearances and story arcs across different series</p>
-            </div>
-            <div class="feature">
-              <h3>API Integration</h3>
-              <p>Seamlessly interact with the Marvel API for up-to-date information</p>
+              <p><strong>(under construction)</strong></p>
             </div>
           </div>
         </section>

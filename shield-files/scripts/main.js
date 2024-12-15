@@ -9,8 +9,6 @@ import { charactersListener } from './listeners/characters.js';
 const routes = {
   ['#home']: () => Home(),
   ['#site-plan']: () => SitePlan(),
-  //['#characters']: async (id) =>
-  //  id ? await Characters(id) : await Characters(),
   ['#characters']: async () => await Characters(),
   ['#characters/:id']: async (id) => await Character(id),
 };

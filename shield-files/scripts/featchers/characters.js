@@ -3,22 +3,12 @@ export class Characters {
   static #privateKey = 'b2832e6f7b2f5f3ea893fef9f6ddc569ddd2c25d';
   static #baseUrl = 'https://gateway.marvel.com/v1/public/characters';
 
-  /**
-   * Generate the authentication hash for the Marvel API.
-   * @returns {Object} - An object containing ts, apikey, and hash.
-   */
   static #generateAuthParams() {
     const ts = Date.now();
     const hash = md5(`${ts}${this.#privateKey}${this.#publicKey}`);
     return { ts, apikey: this.#publicKey, hash };
   }
 
-  /**
-   * Fetch multiple characters with pagination support.
-   * @param {number} limit - The number of results per page (default: 20).
-   * @param {number} offset - The offset for pagination (default: 0).
-   * @returns {Promise<Object>} - The API response data.
-   */
   static async getMany(args) {
     const page = args.page ?? 1;
     const limit = args.limit ?? 20;
@@ -84,4 +74,6 @@ export class Characters {
       throw error;
     }
   }
+
+  static async getComics() {}
 }

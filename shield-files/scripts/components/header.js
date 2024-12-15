@@ -9,8 +9,6 @@ export function Header() {
         <a class="logo" href="#home">Shield Files</a>
         <div class="nav-links">
           <a href="#characters">Characters</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
         </div>
       </nav>
     </header>
